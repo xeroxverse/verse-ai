@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Verse - Your AI Sidekick 🤖</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🤖 Verse</h1>
+            <p class="subtitle">Your AI sidekick for gaming, work & life</p>
+        </header>
+
+        <!-- Status Indicator -->
+        <div id="status" class="status">
+            <span class="status-dot"></span>
+            <span id="status-text">Checking status...</span>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container" id="chat-container">
+            <div class="welcome-message">
+                <h2>👋 Hey there!</h2>
+                <p>I'm Verse, your AI sidekick. I can help you with:</p>
+                <div class="example-questions">
+                    <div class="use-case">🎮 Gaming tips & strategies</div>
+                    <div class="use-case">💼 Work & study assistance</div>
+                    <div class="use-case">🎙️ Voice chat (hands-free)</div>
+                    <div class="use-case">🧠 Remember things you tell me</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <div class="input-wrapper">
+                <textarea 
+                    id="user-input" 
+                    placeholder="Ask me anything..."
+                    rows="2"
+                ></textarea>
+                <button id="send-btn" class="send-btn" title="Send message">
+                    ✈️
+                </button>
+            </div>
+            <div class="input-controls">
+                <button id="voice-btn" class="control-btn" title="Voice input">
+                    <span id="voice-icon">🎤</span>
+                    <span class="btn-label">Voice</span>
+                </button>
+                <button id="speak-btn" class="control-btn" title="Toggle speech output">
+                    <span id="speak-icon">🔊</span>
+                    <span class="btn-label">Speak</span>
+                </button>
+                <button id="clear-btn" class="control-btn" title="Clear chat">
+                    <span>🗑️</span>
+                    <span class="btn-label">Clear</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
