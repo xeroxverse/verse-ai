@@ -86,15 +86,67 @@ pip install -r requirements.txt
 3. **Set up environment variables**:
 ```bash
 cp .env.example .env
-# Edit .env and add your OpenAI API key
 ```
 
-4. **Run the application**:
+4. **Get your OpenAI API Key** (see detailed instructions below)
+
+5. **Edit `.env` file** and add your OpenAI API key:
+```bash
+OPENAI_API_KEY=sk-your-actual-api-key-here
+```
+
+6. **Run the application**:
 ```bash
 python app.py
 ```
 
-5. **Open your browser** and navigate to `http://localhost:5000`
+7. **Open your browser** and navigate to `http://localhost:5000`
+
+## 🔑 Getting Your OpenAI API Key
+
+Verse requires an OpenAI API key to function. Follow these steps to obtain one:
+
+### Step 1: Create an OpenAI Account
+1. Visit [OpenAI's website](https://platform.openai.com/)
+2. Click **Sign Up** (or **Log In** if you already have an account)
+3. Complete the registration process with your email address
+
+### Step 2: Generate an API Key
+1. Once logged in, go to [API Keys page](https://platform.openai.com/api-keys)
+2. Click **"+ Create new secret key"**
+3. Give your key a name (e.g., "Verse AI Assistant")
+4. Click **"Create secret key"**
+5. **Important**: Copy the key immediately - you won't be able to see it again!
+
+### Step 3: Add the Key to Your .env File
+1. Open the `.env` file in your project directory
+2. Replace `your_openai_api_key_here` with your actual API key:
+```bash
+OPENAI_API_KEY=sk-proj-xxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+3. Save the file
+
+### Step 4: Add Credits (If Needed)
+- New OpenAI accounts may receive free credits
+- If you've used your free credits, you'll need to [add billing information](https://platform.openai.com/account/billing)
+- Verse uses GPT-3.5-turbo by default, which is cost-effective (~$0.002 per 1K tokens)
+
+### 🔒 Security Note
+- **Never share your API key** publicly or commit it to version control
+- The `.env` file is in `.gitignore` to prevent accidental commits
+- If you accidentally expose your key, delete it immediately from the OpenAI dashboard and create a new one
+
+### ⚠️ Troubleshooting API Key Issues
+
+**"API key error" message?**
+- Verify your API key is correctly copied (no extra spaces)
+- Check that you have credits available in your OpenAI account
+- Ensure the key hasn't been revoked in the OpenAI dashboard
+
+**"Rate limit exceeded" error?**
+- You may have exceeded your usage quota
+- Check your [usage dashboard](https://platform.openai.com/account/usage)
+- Consider upgrading your plan or waiting for the quota to reset
 
 ## 🎮 Usage
 
