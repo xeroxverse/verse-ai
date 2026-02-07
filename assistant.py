@@ -9,6 +9,10 @@ import json
 from openai import OpenAI
 from datetime import datetime
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 
 class GamingAssistant:
