@@ -10,6 +10,10 @@ import os
 from datetime import datetime
 from assistant import GamingAssistant
 import secrets
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)

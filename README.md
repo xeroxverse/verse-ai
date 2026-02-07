@@ -72,10 +72,24 @@ Verse speaks the answer while you keep playing
 
 ## 📦 Installation
 
+### Prerequisites
+
+**⚠️ IMPORTANT**: You need an OpenAI API key to use Verse. 
+
+**📖 [Click here for detailed API key setup guide](API_KEY_SETUP.md)**
+
+**Quick summary**:
+1. Visit [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+2. Sign up or log in to OpenAI
+3. Create a new API key
+4. Copy the key (starts with `sk-`)
+
+### Installation Steps
+
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/xeroxverse/Verse.git
-cd Verse
+git clone https://github.com/xeroxverse/verse-ai.git
+cd verse-ai
 ```
 
 2. **Install dependencies**:
@@ -83,11 +97,18 @@ cd Verse
 pip install -r requirements.txt
 ```
 
-3. **Set up environment variables**:
+3. **Set up your OpenAI API key**:
 ```bash
 cp .env.example .env
-# Edit .env and add your OpenAI API key
+# Edit .env and replace 'your_openai_api_key_here' with your actual API key
 ```
+
+Example:
+```bash
+OPENAI_API_KEY=sk-proj-your-actual-key-here
+```
+
+> 💡 **Need help?** See the [detailed API Key Setup Guide](API_KEY_SETUP.md)
 
 4. **Run the application**:
 ```bash
@@ -95,6 +116,8 @@ python app.py
 ```
 
 5. **Open your browser** and navigate to `http://localhost:5000`
+
+> ⚠️ If you see "API key error", double-check your `.env` file configuration.
 
 ## 🎮 Usage
 
@@ -121,11 +144,31 @@ python app.py
 
 ## 📋 Configuration
 
-Edit `.env` to customize:
+### API Key Configuration
+
+The most important configuration is your OpenAI API key. Edit `.env` to customize:
+
 ```bash
-OPENAI_API_KEY=your_api_key_here
+# REQUIRED: Your OpenAI API key
+OPENAI_API_KEY=sk-proj-your-actual-key-here
+
+# OPTIONAL: Change the OpenAI model (default: gpt-3.5-turbo)
 OPENAI_MODEL=gpt-3.5-turbo
+
+# OPTIONAL: Use a different OpenAI endpoint
+OPENAI_BASE_URL=https://api.openai.com/v1
 ```
+
+**Getting your API key**: Visit [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+
+**Need help?** Check out the [API Key Setup Guide](API_KEY_SETUP.md) for detailed instructions.
+
+### Available Models
+
+You can change the `OPENAI_MODEL` in your `.env` file:
+- `gpt-3.5-turbo` - Fast and affordable (recommended)
+- `gpt-4` - More capable but slower and more expensive
+- `gpt-4-turbo` - Balance of speed and capability
 
 ## 🏗️ Project Structure
 
@@ -135,6 +178,7 @@ Verse/
 ├── assistant.py                # AI core logic with context-aware prompt
 ├── config.py                   # Configuration settings
 ├── requirements.txt            # Python dependencies
+├── API_KEY_SETUP.md            # Detailed API key setup guide
 ├── user_memory/                # Local memory storage (auto-created)
 ├── static/
 │   ├── css/
@@ -144,6 +188,53 @@ Verse/
 ├── templates/
 │   └── index.html             # Minimalist mobile-optimized UI
 └── README.md
+```
+
+## 🐛 Troubleshooting
+
+### "API key error" or "not configured"
+
+**Problem**: OpenAI API key is missing or invalid
+
+**Solution**:
+1. Make sure you have a `.env` file (copy from `.env.example`)
+2. Add your API key from https://platform.openai.com/api-keys
+3. Verify the key starts with `sk-`
+4. Restart the application
+
+📖 **See [API_KEY_SETUP.md](API_KEY_SETUP.md) for detailed instructions**
+
+### "Insufficient quota" or "Billing error"
+
+**Problem**: Your OpenAI account needs billing setup or has run out of credits
+
+**Solution**:
+1. Visit https://platform.openai.com/account/billing
+2. Add a payment method
+3. Check your usage and add credits if needed
+
+### "Rate limit exceeded"
+
+**Problem**: Too many requests to OpenAI API
+
+**Solution**:
+1. Wait a few minutes before trying again
+2. If persistent, check your OpenAI plan limits
+
+### Application won't start
+
+**Problem**: Missing dependencies or configuration
+
+**Solution**:
+```bash
+# Reinstall dependencies
+pip install -r requirements.txt
+
+# Check Python version (needs 3.8+)
+python --version
+
+# Verify .env file exists
+ls -la .env
 ```
 
 ## 🔒 Privacy & Security
