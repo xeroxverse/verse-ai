@@ -25,8 +25,16 @@ class GamingAssistant:
         self.memory_dir.mkdir(exist_ok=True)
         
         if not self.api_key:
-            print("⚠️  Warning: OPENAI_API_KEY not found in environment")
-            print("   The assistant may not function without valid credentials")
+            print("\n" + "="*60)
+            print("⚠️  WARNING: OPENAI_API_KEY not found!")
+            print("="*60)
+            print("📖 To use Verse AI, you need an OpenAI API key.")
+            print("\n🔑 Quick Setup:")
+            print("   1. Get your key from: https://platform.openai.com/api-keys")
+            print("   2. Copy .env.example to .env")
+            print("   3. Add your API key to the .env file")
+            print("\n📚 For detailed instructions, see: API_KEY_SETUP.md")
+            print("="*60 + "\n")
         
         try:
             self.client = OpenAI(
@@ -35,7 +43,7 @@ class GamingAssistant:
             )
             self.ready = True
         except Exception as e:
-            print(f"Error initializing OpenAI client: {e}")
+            print(f"❌ Error initializing OpenAI client: {e}")
             self.ready = False
         
         # System prompt for Verse - AI sidekick
@@ -91,7 +99,14 @@ Remember: You're an AI sidekick, not just a chatbot. You help users win games, g
             AI assistant's response as string
         """
         if not self.is_ready():
-            return "❌ AI assistant is not configured. Please set up your OpenAI API credentials."
+            return ("❌ AI assistant is not configured.\n\n"
+                   "🔑 You need an OpenAI API key to use Verse.\n\n"
+                   "Quick setup:\n"
+                   "1. Get your key: https://platform.openai.com/api-keys\n"
+                   "2. Copy .env.example to .env\n"
+                   "3. Add your API key to the .env file\n"
+                   "4. Restart the application\n\n"
+                   "📖 See API_KEY_SETUP.md for detailed instructions.")
         
         try:
             # Build messages array
@@ -138,10 +153,18 @@ Remember: You're an AI sidekick, not just a chatbot. You help users win games, g
             print(f"Error getting AI response: {error_msg}")
             
             # Provide helpful error messages
-            if "api_key" in error_msg.lower():
-                return "❌ API key error. Please check your OpenAI API configuration."
+            if "api_key" in error_msg.lower() or "authentication" in error_msg.lower():
+                return ("❌ API key error. Your OpenAI API key is invalid or missing.\n\n"
+                       "🔑 Please check:\n"
+                       "1. You have a valid API key from https://platform.openai.com/api-keys\n"
+                       "2. The key is correctly added to your .env file\n"
+                       "3. The key hasn't been revoked\n\n"
+                       "📖 See API_KEY_SETUP.md for help.")
             elif "rate_limit" in error_msg.lower():
                 return "⏳ Rate limit reached. Please wait a moment and try again."
+            elif "quota" in error_msg.lower() or "insufficient" in error_msg.lower():
+                return ("💳 Insufficient quota. Your OpenAI account needs billing setup or credits.\n\n"
+                       "Please visit: https://platform.openai.com/account/billing")
             elif "timeout" in error_msg.lower():
                 return "⏱️ Request timeout. Please try again."
             else:
