@@ -91,7 +91,7 @@ set OPENAI_API_KEY=sk-proj-your-actual-key-here
 
 2. **Check the terminal output**
    - ✅ If configured correctly, you'll see: "🎮 Starting Verse - Your AI Sidekick..."
-   - ❌ If not configured, you'll see: "⚠️ Warning: OPENAI_API_KEY not found in environment"
+   - ❌ If not configured, you'll see: "⚠️ WARNING: OPENAI_API_KEY not found!"
 
 3. **Test in your browser**
    - Open http://localhost:5000

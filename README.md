@@ -88,8 +88,8 @@ Verse speaks the answer while you keep playing
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/xeroxverse/Verse.git
-cd Verse
+git clone https://github.com/xeroxverse/verse-ai.git
+cd verse-ai
 ```
 
 2. **Install dependencies**:
