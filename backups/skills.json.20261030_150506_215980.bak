@@ -1,0 +1,28 @@
+{
+  "skills": [
+    {
+      "id": "skill_001",
+      "name": "responsive-jarvis-web-scaffold",
+      "category": "web_development",
+      "trigger": "website portfolio business ecommerce landing",
+      "solution_summary": "Generates semantic HTML5, modern CSS Grid/Flexbox variables, interactive JS, and runs validation.",
+      "success_count": 2
+    },
+    {
+      "id": "skill_002",
+      "name": "intel-ultra5-125h-resource-guard",
+      "category": "hardware_optimization",
+      "trigger": "heavy model local gguf cpu igpu npu",
+      "solution_summary": "Enforces single-model slot loading under 10.5GB RAM budget and uses Q4_K_M GGUF without CUDA.",
+      "success_count": 3
+    },
+    {
+      "id": "skill_003",
+      "name": "python-fastapi-sqlite-service",
+      "category": "backend_api",
+      "trigger": "api backend database automation tool",
+      "solution_summary": "Builds modular Python service with contextlib.closing SQLite connections and unit tests.",
+      "success_count": 2
+    }
+  ]
+}

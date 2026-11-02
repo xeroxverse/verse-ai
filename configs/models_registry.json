@@ -1,0 +1,36 @@
+{
+  "active_loaded_model": "qwen2.5-coder:3b-instruct-q4_K_M",
+  "role_assignments": {
+    "CEO_AI": "qwen2.5:1.5b-instruct-q4_K_M",
+    "RESEARCH_AI": "qwen2.5:1.5b-instruct-q4_K_M",
+    "DESIGNER_AI": "qwen2.5-coder:3b-instruct-q4_K_M",
+    "CODER_AI": "qwen2.5-coder:7b-instruct-q4_K_M",
+    "TESTER_AI": "qwen2.5:1.5b-instruct-q4_K_M",
+    "SECURITY_AI": "qwen2.5:1.5b-instruct-q4_K_M",
+    "VOICE_AI": "qwen2.5:1.5b-instruct-q4_K_M",
+    "EMPLOYEE_AI": "qwen2.5:1.5b-instruct-q4_K_M"
+  },
+  "registered_gguf_models": [
+    {
+      "name": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+      "quantization": "Q4_K_M",
+      "est_ram_gb": 1.3,
+      "compatible_ultra5_125h": true,
+      "path": "C:\\verse\\models\\qwen2.5-1.5b-instruct-q4_k_m.gguf"
+    },
+    {
+      "name": "qwen2.5-coder-3b-instruct-q4_k_m.gguf",
+      "quantization": "Q4_K_M",
+      "est_ram_gb": 2.4,
+      "compatible_ultra5_125h": true,
+      "path": "C:\\verse\\models\\qwen2.5-coder-3b-instruct-q4_k_m.gguf"
+    },
+    {
+      "name": "qwen2.5-coder-7b-instruct-q4_k_m.gguf",
+      "quantization": "Q4_K_M",
+      "est_ram_gb": 4.7,
+      "compatible_ultra5_125h": true,
+      "path": "C:\\verse\\models\\qwen2.5-coder-7b-instruct-q4_k_m.gguf"
+    }
+  ]
+}

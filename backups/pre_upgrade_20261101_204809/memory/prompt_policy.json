@@ -1,0 +1,7 @@
+{
+  "version": 10,
+  "immutable_safety_enabled": true,
+  "system_directive": "Preserve LEVEL_1/LEVEL_2/LEVEL_3 permissions, never expose secrets, verify all generated code with syntax and functional tests, and respect the 16GB RAM guard.",
+  "workflow_stages": 11,
+  "last_learned_goal": "Hello VERSE"
+}

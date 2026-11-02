@@ -1,0 +1,18 @@
+{
+  "skills": [
+    {
+      "id": "skill_001",
+      "name": "windows-powershell-safe-batch",
+      "trigger": "powershell or system automation",
+      "strategy": "Pre-check LEVEL_1/2/3 safety, create timestamped backup, run command, verify exit code.",
+      "success_count": 1
+    },
+    {
+      "id": "skill_002",
+      "name": "intel-ultra5-ram-guard",
+      "trigger": "heavy coding or multi-step LLM task",
+      "strategy": "Load 1 model sequentially (qwen2.5-coder:7b for code, 3b for planning) keeping RAM < 11.5GB.",
+      "success_count": 1
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 36,
+      "sha256": "0ba1373028d9c22e"
+    },
+    {
+      "file": "__pycache__\\app_service.cpython-312.pyc",
+      "bytes": 963,
+      "sha256": "9d41b25005f10907"
+    },
+    {
+      "file": "__pycache__\\test_service.cpython-312.pyc",
+      "bytes": 1157,
+      "sha256": "829e3de107e15fab"
+    },
+    {
+      "file": "app.js",
+      "bytes": 191,
+      "sha256": "50e4cd67c3191968"
+    },
+    {
+      "file": "app_service.py",
+      "bytes": 619,
+      "sha256": "2775d0cf6a92eaa4"
+    },
+    {
+      "file": "index.html",
+      "bytes": 1104,
+      "sha256": "58696f9409c2d739"
+    },
+    {
+      "file": "README.md",
+      "bytes": 289,
+      "sha256": "6b6a8e7393c473b6"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 946,
+      "sha256": "b7b01f32dba7a045"
+    },
+    {
+      "file": "test_service.py",
+      "bytes": 536,
+      "sha256": "14ecd3f314587b73"
+    },
+    {
+      "file": "verse_project_spec.json",
+      "bytes": 1268,
+      "sha256": "f85e2c67b8ef9e76"
+    }
+  ]
+}

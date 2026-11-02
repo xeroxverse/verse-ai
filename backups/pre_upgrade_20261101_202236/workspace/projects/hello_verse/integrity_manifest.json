@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 36,
+      "sha256": "0ba1373028d9c22e"
+    },
+    {
+      "file": "app_service.py",
+      "bytes": 542,
+      "sha256": "c1ff9a99324a2224"
+    },
+    {
+      "file": "README.md",
+      "bytes": 245,
+      "sha256": "23fa75192d956d13"
+    },
+    {
+      "file": "test_service.py",
+      "bytes": 519,
+      "sha256": "4275be2ffaf8ae57"
+    },
+    {
+      "file": "verse_project_spec.json",
+      "bytes": 1209,
+      "sha256": "6680ec8036ee3010"
+    }
+  ]
+}

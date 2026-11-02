@@ -1,0 +1,50 @@
+{
+  "CEO_AI": {
+    "tasks_assigned": 8,
+    "tasks_succeeded": 8,
+    "tasks_failed": 0,
+    "avg_latency_ms": 13.99
+  },
+  "RESEARCH_AI": {
+    "tasks_assigned": 8,
+    "tasks_succeeded": 8,
+    "tasks_failed": 0,
+    "avg_latency_ms": 11.0
+  },
+  "DESIGNER_AI": {
+    "tasks_assigned": 8,
+    "tasks_succeeded": 8,
+    "tasks_failed": 0,
+    "avg_latency_ms": 13.0
+  },
+  "CODER_AI": {
+    "tasks_assigned": 8,
+    "tasks_succeeded": 8,
+    "tasks_failed": 0,
+    "avg_latency_ms": 21.96
+  },
+  "TESTER_AI": {
+    "tasks_assigned": 8,
+    "tasks_succeeded": 8,
+    "tasks_failed": 0,
+    "avg_latency_ms": 17.98
+  },
+  "SECURITY_AI": {
+    "tasks_assigned": 8,
+    "tasks_succeeded": 8,
+    "tasks_failed": 0,
+    "avg_latency_ms": 10.01
+  },
+  "VOICE_AI": {
+    "tasks_assigned": 8,
+    "tasks_succeeded": 8,
+    "tasks_failed": 0,
+    "avg_latency_ms": 8.02
+  },
+  "EMPLOYEE_AI": {
+    "tasks_assigned": 8,
+    "tasks_succeeded": 8,
+    "tasks_failed": 0,
+    "avg_latency_ms": 9.01
+  }
+}
